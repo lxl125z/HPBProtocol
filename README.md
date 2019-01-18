@@ -1,17 +1,17 @@
 
-##HPBWallet 协议文档
+## HPBWallet 协议文档
 
 更新：2019.1.18
 
-###简介
+### 简介
 
 场景一：钱包APP内嵌dapp的H5页面，进行登录和支付。
 
 场景二：钱包App扫二维码进行登录和支付，适用于Web版dapp。
 
-##场景一
+## 场景一
 
-###登录
+### 登录
 
 >场景：在钱包内打开H5,应用内进行用户登陆信息验证。
 >
@@ -70,7 +70,7 @@ sign = ecc.sign(data, privateKey)
 * DApp收到数据，实现`function getCallback(params) `接收原生回调传值action字段，判断此次行为，并发送到dapp sever验证sign签名数据，返回结果code给dapp判断成功状态。
 
 
-###支付
+### 支付
 
 >场景：在钱包内打开H5,应用内进行支付。
 >
@@ -120,9 +120,9 @@ sign = ecc.sign(data, privateKey)
 
 
 
-##场景二
+## 场景二
 
-###登录
+### 登录
 
 
 >场景：使用钱包扫描web网站上二维码登录
@@ -189,7 +189,7 @@ https://www.hpb.io/client?login={
 * dapp server收到数据，验证sign签名数据，并返回结果code；若验证成功，则在dapp的业务逻辑中，将该用户设为已登录状态。
 
 
-###支付
+### 支付
 
 >场景：钱包扫描网站二维码进行支付
 >
